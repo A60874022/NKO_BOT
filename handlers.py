@@ -16,15 +16,28 @@ async def get_information(callback: CallbackQuery):
     await callback.message.answer(
         text="Выбирайте тему для получения запроса", reply_markup=information_keyboard()
     )
+    print(600)
 
-
+import asyncio
 @user_router.callback_query(F.data == "1",)
 async def get_one_information(callback: CallbackQuery):
     """Получение информации"""
-    print(200)
+    print(101)
+    t = {}
+    z = await collection.find_one({"author": "author"})
+    print(z, 1)
     await callback.message.answer(
-        text="Выбирайте тему для получения запроса", reply_markup=information_keyboard()
+        text=f"{z['name']}", 
     )
+
+
+
+async def run():
+    t = []
+    
+        #print(doc, 123)
+   
+   
 
 @user_router.callback_query(F.data == "Inserting information",)
 async def inserting_information(callback: CallbackQuery):

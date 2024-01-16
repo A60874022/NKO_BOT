@@ -7,7 +7,7 @@ books_data = [
     },
     {
         "name": "Python Crash Course: A Hands-On, Project-Based Introduction to Programming",
-        "author": "Eric Matthes",
+        "author": "author",
         "price": 22.97,
         "url": "https://amzn.to/2yQfQZl"
     },
