@@ -22,20 +22,31 @@ import asyncio
 @user_router.callback_query(F.data == "1",)
 async def get_one_information(callback: CallbackQuery):
     """Получение информации"""
-    print(101)
-    t = {}
-    z = await collection.find_one({"author": "author"})
-    print(z, 1)
+    z = await run()
     await callback.message.answer(
-        text=f"{z['name']}", 
+        text=f"{z}", 
     )
 
 
 
 async def run():
-    t = []
-    
-        #print(doc, 123)
+    a = []
+    collection.create_index( { 'name': "text"} )
+    x = collection.find( { "$text": { "$search": "Hands-On" } })
+    async for document in x:
+        a.append(document['name'])
+    '''async for document in collection.find( { "$text": { "$search": "Python Crash Course" } }):
+         a.append(document)'''a      
+    return (*a,)
+  
+  
+
+     
+
+      
+  
+
+        
    
    
 
