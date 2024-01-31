@@ -61,3 +61,41 @@ docker run --name backend_container --rm -p 443:443 -d backend
 ```
 docker ps
 ```
+
+
+
+Шаги добавления тапа (tap) MongoDB. 
+Откройте терминал и выполните следующие команды:
+
+brew tap mongodb/brew
+brew install mongodb-community
+
+Эти команды добавят тап MongoDB и установят MongoDB Community Edition на вашем macOS. 
+
+
+для указания корректного пути бд:
+
+mongod --dbpath /Users/Maria/Dev/backend/data/db
+
+
+запустим консольную оболочку:
+
+mongosh 
+
+и введем там следующую команду:
+
+use Bot_db
+
+
+uvicorn admin_main:app --reload
+
+Откройте файл view.py, который расположен по следующему пути: /Users/Maria/Dev/admin-starlette/venv/lib/python3.10/site-packages/starlette_admin/contrib/odmantic/converters.py.
+
+Найдите следующую строку:
+
+python
+Copy code
+"type": type.pydantic_field.annotation,
+
+
+"type": type.pydantic_field.outer_type_,
