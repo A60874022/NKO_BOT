@@ -149,3 +149,8 @@ dmypy.json
 static/
 posts/static/
 media/
+
+
+# MongoDB WiredTiger log files
+backend/admin/data/db/journal/WiredTigerLog.0000000002
+backend/admin/data/db/journal/WiredTigerPreplog.0000000001
