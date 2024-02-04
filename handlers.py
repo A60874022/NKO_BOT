@@ -1,18 +1,23 @@
+import logging
+import os
+
 from aiogram import F, Router
 from aiogram.types import CallbackQuery, Message
-from keyboards import information_keyboard
-from test_data import books_data
-from motor.motor_asyncio import AsyncIOMotorClient
-
+from aiogram.filters import CommandStart
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import FSInputFile
-from word_cloud import word_cloud
 
+from keyboards import information_keyboard, start_keyboard
+from lexicon import LEXICON
+from utils import (get_title,
+                   get_information_title,
+                   search_information,
+                   get_image)
 
-client = AsyncIOMotorClient('mongodb://localhost:27017')
-collection = client.MongoDB.MongoCollection
+logger = logging.getLogger(__name__)
+
 router = Router()
 user_router = Router()
 storage = MemoryStorage()
@@ -20,51 +25,87 @@ storage = MemoryStorage()
 
 class Data(StatesGroup):
     """Машина состояний для реализации сценариев диалогов с пользователем."""
+
     information = State()
+    title = State()
+
+
+@user_router.message(CommandStart())
+async def process_start_command(message: Message):
+    """Получение тем из БД."""
+    await message.answer(
+        text=LEXICON["start"],
+        reply_markup=start_keyboard()
+    )
 
 
 @user_router.callback_query(F.data == "information",)
-async def get_information(callback: CallbackQuery):
-    """Получение информации."""
-    await callback.message.answer(
-        text="Выбирайте тему для получения запроса",
-        reply_markup=information_keyboard()
-    )
+async def get_title_db(callback: CallbackQuery, state: FSMContext):
+    """Получение тем из БД."""
+    try:
+        documents = await get_title()
+        if not documents:
+            await callback.message.answer(
+                    LEXICON["Нет информации"],
+                )
+            await state.clear()
+            return
+        await state.set_state(Data.title)
+        await callback.message.answer(
+            text=LEXICON["Тема"],
+            reply_markup=information_keyboard(documents))
+    except Exception as err:
+        logger.error(f"Ошибка при получении информации из БД: {err}")
+        await state.clear()
 
 
-@user_router.callback_query(F.data == "1",)
-async def get_one_information(callback: CallbackQuery, state: FSMContext):
+@user_router.callback_query(Data.title)
+async def get_information(callback: CallbackQuery, state: FSMContext, bot):
     """Вывод запрашиваемой информации."""
+    try:
+        information_title = await get_information_title(callback.data)
+        description = information_title.get('description', False)
+        if not (information_title and description):
+            await callback.message.answer(
+                    LEXICON["Нет информации по теме"],
+                )
+            await state.clear()
+            return
+        file_id = information_title.get('image', False)
+        if file_id:
+            await get_image(file_id)
+            file = "image.png"
+            await callback.bot.send_photo(callback.message.chat.id,
+                                          FSInputFile(file))
+            os.remove("image.png")
+        await callback.message.answer(f"{description}")
+    except Exception as err:
+        logger.error(f"Ошибка при получении информации из БД: {err}")
+    finally:
+        await state.clear()
+
+
+@user_router.callback_query(F.data == "word_information",)
+async def get_one_information(callback: CallbackQuery, state: FSMContext):
+    """Поиск информации по словам."""
     await state.set_state(Data.information)
-    await callback.message.answer("Введите, что вы хотите найти")
+    await callback.message.answer(LEXICON["Введите слово"])
 
 
 @user_router.message(Data.information)
-async def process_add_task_name(message: Message, state: FSMContext, bot):
-    """Вывод запрашиваемой информации."""
-    z = await search_information(message.text)
-    s = " ".join(z)
-    file = await word_cloud(s)
-    await bot.send_photo(message.chat.id, FSInputFile(file))
-    await message.answer(
-        text=f"{z}",
-    )
-    await state.clear()
-
-      
-async def search_information(name):
-    """Функция поиска информации в БД"""
-    a = []
-    collection.create_index({'name': "text"})
-    x = collection.find({"$text": {"$search": f"{name}"}})
-    async for document in x:
-        a.append(document['name'])
-    return (*a,)
-
-
-@user_router.callback_query(F.data == "Inserting information",)
-async def inserting_information(callback: CallbackQuery):
-    """Функция добавления информации в БД."""
-    collection.insert_many(books_data)
-    await callback.message.answer(
-        text="Информация добавлена в БД")
+async def process_team_name(message: Message, state: FSMContext):
+    """Обрабатывает введенное слово пользователем."""
+    try:
+        word = await search_information(message.text)
+        if not word:
+            await message.answer(
+                    LEXICON["Слово отсутствует"],
+                )
+            await state.clear()
+            return
+        await state.set_state(Data.title)
+        await message.answer(LEXICON["Тема"],
+                             reply_markup=information_keyboard(word),)
+    except Exception as err:
+        logger.error(f"Ошибка при получении информации из БД: {err}")
+        await state.clear()

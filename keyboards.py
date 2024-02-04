@@ -1,31 +1,36 @@
+from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.types import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
 )
 
+from lexicon import BUTTONS
 
-def information_keyboard() -> InlineKeyboardMarkup:
-    """Создаем объекты инлайн-кнопок для получения запроса"""
-    one_information = InlineKeyboardButton(
-        text="one_information", callback_data="1"
+
+def start_keyboard():
+    """Клавиатура при старте бота."""
+    button_1 = InlineKeyboardButton(
+        text=BUTTONS["Тема"],
+        callback_data="information"
     )
-    two_information = InlineKeyboardButton(
-        text="two_information", callback_data="2"
+    button_2 = InlineKeyboardButton(
+        text=BUTTONS["Поиск слов"],
+        callback_data="word_information"
     )
-    three_information = InlineKeyboardButton(
-        text="three_information", callback_data="3"
-    )
-    four_information = InlineKeyboardButton(
-        text="four_information", callback_data="4")
-    five_information = InlineKeyboardButton(
-        text="five_information", callback_data="5")
-    # Создаем объект инлайн-клавиатуры
-    information_keyboard: InlineKeyboardMarkup = InlineKeyboardMarkup(
-       inline_keyboard=[[one_information],
-                        [two_information],
-                        [three_information],
-                        [four_information],
-                        [five_information],
-                        ]
-)
-    return information_keyboard
+    keyboard = InlineKeyboardMarkup(
+        inline_keyboard=[[button_1],
+                         [button_2], ])
+    return keyboard
+
+
+def information_keyboard(documents):
+    """Клавиатура инлайн-кнопок  для получения запроса статей."""
+    kb_builder = InlineKeyboardBuilder()
+    buttons: list[InlineKeyboardButton] = []
+    if documents:
+        for button in documents:
+            buttons.append(InlineKeyboardButton(
+                text=f"{button}",
+                callback_data=f"{button}"))
+    kb_builder.row(*buttons, width=1)
+    return kb_builder.as_markup()
