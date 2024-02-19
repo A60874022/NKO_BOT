@@ -1,11 +1,12 @@
-FROM python:3.9
+FROM python:3.10-slim-buster
 
-WORKDIR /app
 
-COPY requirements.txt .
+WORKDIR app/
 
-RUN pip install -r requirements.txt --no-cache-dir
 
 COPY . .
+
+# Устанавливаем все необходимые пакеты python из requirements.txt
+RUN pip3 install -r requirements.txt
 
 CMD ["python", "nko_bot.py"] 

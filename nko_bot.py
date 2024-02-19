@@ -1,15 +1,24 @@
 import logging
-
+from logging.handlers import RotatingFileHandler
 from aiogram import Bot, Dispatcher
 import os
 from dotenv import load_dotenv
 from handlers import user_router
 
+LOGLEVEL = os.environ.get('LOGLEVEL', 'INFO').upper()
 
+rotating_handler = RotatingFileHandler(
+        filename="log_dir//program.log",
+        maxBytes=50000000,
+        backupCount=3,
+        encoding="utf-8",
+    )
 logging.basicConfig(
-    filename='program.log', 
-    format='%(asctime)s, %(levelname)s, %(message)s, %(name)s'
+    level = LOGLEVEL,
+    format='%(asctime)s, %(levelname)s, %(message)s, %(name)s',
+    handlers=[rotating_handler],
 )
+
 logger = logging.getLogger(__name__)
 
 

@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - mongodb
+    networks:
+      - db_network
+    env_file:
+      - dev.env
+    volumes:
+      - log_dir:/app/log_dir
+      
+
+
+  mongodb:
+    image: "mongo:7.0.5"
+    ports:
+      - '27017:27017'
+    networks:
+      - db_network
+    env_file:
+      - dev.env
+    volumes:
+      - log_dir:/app/log_dir
+
+volumes:
+  log_dir:
+
+networks:
+  db_network:

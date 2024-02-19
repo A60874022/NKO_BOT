@@ -2,11 +2,17 @@ from bson.objectid import ObjectId
 from io import BytesIO
 import base64
 from PIL import Image
-
+import pytest
 from motor.motor_asyncio import AsyncIOMotorClient
+import os
+MONGO_HOST = os.environ.get("MONGO_HOST", "localhost")
+MONGO_PORT = os.environ.get("MONGO_PORT", 27017)
 
 
-client = AsyncIOMotorClient('mongodb://localhost:27017')
+MONGO_URL = f"mongodb://{MONGO_HOST}:{MONGO_PORT}/"
+
+
+client = AsyncIOMotorClient(MONGO_URL)
 collection = client.admin.topic
 image_collection = client.admin.fs.chunks
 
