@@ -4,9 +4,9 @@ from starlette_admin import I18nConfig
 from starlette_admin.contrib.mongoengine import Admin
 from starlette_admin.views import Link
 
-from app_admin.config import config
-from app_admin.mongoengine.models import Topic
-from app_admin.mongoengine.views import TopicView
+from admin.app_admin.config import config
+from admin.app_admin.mongoengine.models import Topic
+from admin.app_admin.mongoengine.views import TopicView
 
 __all__ = ["admin", "connection"]
 
@@ -28,4 +28,5 @@ admin.add_view(
     )
 )
 
-admin.add_view(Link(label="На страницу приветствия", icon="fa fa-link", url="/"))
+admin.add_view(Link(label="На страницу приветствия", 
+                    icon="fa fa-link", url="/"))

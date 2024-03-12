@@ -4,8 +4,8 @@ from .models import Topic
 
 
 class TopicView(ModelView):
-    model = Topic
 
+    model = Topic
     fields = [
         "id",
         "title",

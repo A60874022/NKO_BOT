@@ -3,7 +3,7 @@ from logging.handlers import RotatingFileHandler
 from aiogram import Bot, Dispatcher
 import os
 from dotenv import load_dotenv
-from handlers import user_router
+from bot.handlers.handlers import user_router
 
 LOGLEVEL = os.environ.get('LOGLEVEL', 'INFO').upper()
 

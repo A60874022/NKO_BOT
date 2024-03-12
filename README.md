@@ -19,29 +19,30 @@ cd backend
 
 Создайте env-file:
 ```python
-touch .env
+touch .env.dev
 ```
 
 Добавьте в env-file данные:
 ```python
 TELEGRAM_TOKEN=телеграм_токен_бота
+MONGO_HOST=127.0.0.1
+MONGO_PORT=27017
+
+LOGLEVEL=(установите уровень логирования)
 ```
 
 Cоздайте и активируйте виртуальное окружение:
 
 ```
-python3 -m venv venv
+python -m venv venv
 ```
 
 ```
-source venv/bin/activate
+source venv/Scripts/activate
 ```
 
 Установите зависимости из файла requirements.txt:
 
-```
-python3 -m pip install --upgrade pip
-```
 
 ```
 pip install -r requirements.txt
@@ -49,16 +50,7 @@ pip install -r requirements.txt
 
 Выполните сборку образа:
 ```
-docker build -t backend . 
+docker compose up -d --build
 ```
 
-Запустите контейнер (в режиме демона):
-```
-docker run --name backend_container --rm -p 443:443 -d backend
-```
-
-Проверьте состояние контейнера:
-```
-docker ps
-```
 
