@@ -25,10 +25,12 @@ touch .env.dev
 Добавьте в env-file данные:
 ```python
 TELEGRAM_TOKEN=телеграм_токен_бота
-MONGO_HOST=127.0.0.1
-MONGO_PORT=27017
-
+MONGO_HOST=
+MONGO_PORT=
 LOGLEVEL=(установите уровень логирования)
+SECRET=secret
+ADMIN=admin_name
+PASS=admin_password
 ```
 
 Cоздайте и активируйте виртуальное окружение:

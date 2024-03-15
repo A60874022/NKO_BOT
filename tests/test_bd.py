@@ -15,7 +15,7 @@ MONGO_URL = f"mongodb://{MONGO_HOST}:{MONGO_PORT}/"
 async def db():
     """Фикстура соединения приложения с БД."""
     client = AsyncIOMotorClient(MONGO_URL)
-    db = client.bd.test
+    db = client.bd.admin
     yield db
     await db.drop()
     client.close()
@@ -58,7 +58,7 @@ async def test_get_description(db, test_insert):
 async def test_search_information(test_insert):
     """Проверка поиска статьи по ключевому слову."""
     client = AsyncIOMotorClient(MONGO_URL)
-    db = client.bd.test
+    db = client.bd.admin
     a = []
     await db.insert_many(test_insert)
     db.create_index({'description': "text"})

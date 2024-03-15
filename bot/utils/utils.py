@@ -12,8 +12,8 @@ MONGO_PORT = os.environ.get("MONGO_PORT", 27017)
 MONGO_URL = f"mongodb://{MONGO_HOST}:{MONGO_PORT}/"
 
 client = AsyncIOMotorClient(MONGO_URL)
-collection = client.admin.topic
-image_collection = client.admin.fs.chunks
+collection = client.test.topic
+image_collection = client.test.fs.chunks
 
 
 async def get_title():
