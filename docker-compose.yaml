@@ -21,7 +21,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: bash -c "uvicorn admin.main:app --reload --host=0.0.0.0"
+    command: bash -c "uvicorn admin. -  main:app --reload --host=0.0.0.0"
     volumes:
       - static_value:/app/backend/admin/statics/
     depends_on:
