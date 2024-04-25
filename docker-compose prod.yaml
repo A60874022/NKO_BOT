@@ -1,0 +1,69 @@
+version: '3.8'
+
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bash -c "python nko_bot.py"
+    depends_on:
+      - mongodb
+    networks:
+      - db_network
+    env_file:
+      - .env.prod
+    volumes:
+      - log_dir:/app/log_dir
+
+  admin:
+    container_name: "admin"
+    image: admin
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bash -c "uvicorn admin. -  main:app --reload --host=0.0.0.0"
+    volumes:
+      - static_value:/app/backend/admin/statics/
+    depends_on:
+      - mongodb
+    networks:
+      - db_network
+    env_file:
+      - .env.prod
+    ports:
+      - 8000:8000
+
+
+  mongodb:
+    image: "mongo:7.0.5"
+    ports:
+      - '27017:27017'
+    networks:
+      - db_network
+    env_file:
+      - .env.prod
+    volumes:
+      - log_dir:/app/log_dir
+
+  nginx:
+    container_name: "web"
+    image: nginx:alpine
+    depends_on:
+      - admin
+    ports:
+      - "80:80"
+    volumes:
+      - static_value:/var/html/static/
+      - ./app/conf.d:/etc/nginx/conf.d 
+
+      
+
+    networks:
+      - db_network
+
+volumes:
+  log_dir:
+  static_value:
+
+networks:
+  db_network:
