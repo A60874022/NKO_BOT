@@ -39,7 +39,7 @@ jobs:
            context: ./backend 
            file: ./backend/Dockerfile  
            push: true 
-           tags: ${{ secrets.DOCKER_USERNAME }}/nko-bot:latest
+           tags: ${{ secrets.DOCKER_USERNAME }}/bot:latest
         
 
   
