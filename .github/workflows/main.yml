@@ -71,6 +71,5 @@ jobs:
             echo ADMIN=${{ secrets.admin_password }} >> .env
             
             
-            
           
             sudo docker-compose up -d --build
