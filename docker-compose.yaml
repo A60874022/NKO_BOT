@@ -11,7 +11,7 @@ services:
     networks:
       - db_network
     env_file:
-      - .env.dev
+      - .env
     volumes:
       - log_dir:/app/log_dir
 
@@ -21,7 +21,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: bash -c "uvicorn admin. -  main:app --reload --host=0.0.0.0"
+    command: bash -c "uvicorn admin. -  main:app --reload"
     volumes:
       - static_value:/app/backend/admin/statics/
     depends_on:
@@ -29,7 +29,7 @@ services:
     networks:
       - db_network
     env_file:
-      - .env.dev
+      - .env
     ports:
       - 8000:8000
 
