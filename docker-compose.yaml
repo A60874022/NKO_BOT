@@ -22,11 +22,11 @@ services:
       #command: bash -c "python nko_bot.py"
     depends_on:
         - mongodb
-      networks:
+    networks:
         - db_network
-      env_file:
+    env_file:
         - .env
-      volumes:
+    volumes:
         - log_dir:/app/log_dir
     '''container_name: "admin"
     image: admin
