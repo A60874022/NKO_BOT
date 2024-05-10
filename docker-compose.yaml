@@ -65,5 +65,6 @@ volumes:
   log_dir:
   static_value:
 
+
 networks:
   db_network:
