@@ -62,10 +62,11 @@ jobs:
            passphrase: ${{ secrets.PASSPHRASE }} 
            script: | 
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/bot:latest
-            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/bot:latest 
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/admin:latest 
             sudo docker-compose stop 
-            sudo docker-compose rm backend 
-            sudo touch .env.dev
+            sudo docker-compose rm bot
+            udo docker-compose rm admin 
+            sudo touch .env
             echo MONGO_PORT=${{ secrets.TELEGRAM_TOKEN }} >> .env
             echo MONGO_HOST=${{ secrets.MONGO_HOST }} >> .env
             echo MONGO_PORT=${{ secrets.MONGO_PORT }} >> .env

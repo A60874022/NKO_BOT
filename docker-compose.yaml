@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   bot:
+    container_name: bot
     #build:
     #  context: .
     image: anton60874022/bot:latest
