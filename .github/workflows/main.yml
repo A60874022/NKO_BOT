@@ -39,11 +39,11 @@ jobs:
            file: Dockerfile  
            push: true 
            tags: ${{ secrets.DOCKER_USERNAME }}/bot:latest
-      - name: Push backend to Docker Hub 
+      - name: Push backend1 to Docker Hub 
         uses: docker/build-push-action@v2 
         with: 
            context: .
-           file: Dockerfile  
+           file: Dockerfile1  
            push: true 
            tags: ${{ secrets.DOCKER_USERNAME }}/admin:latest
         
