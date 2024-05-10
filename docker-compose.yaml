@@ -2,10 +2,12 @@ version: '3.8'
 
 services:
   bot:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    command: bash -c "python nko_bot.py"
+    #build:
+    #  context: .
+    #  dockerfile: Dockerfile
+    image: anton60874022/bot:latest
+    restart: always
+    #command: bash -c "python nko_bot.py"
     depends_on:
       - mongodb
     networks:
