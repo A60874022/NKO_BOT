@@ -28,23 +28,6 @@ services:
     env_file:
         - .env
     volumes:
-        - log_dir:/app/log_dir
-    '''container_name: "admin"
-    image: admin
-    build:
-      context: .
-      dockerfile: Dockerfile
-    command: bash -c "uvicorn admin. -  main:app --reload"
-    volumes:
-      - static_value:/app/backend/admin/statics/
-    depends_on:
-      - mongodb
-    networks:
-      - db_network
-    env_file:
-      - .env
-    ports:
-      - 8000:8000'''
 
 
   mongodb:
