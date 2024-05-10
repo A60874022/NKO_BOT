@@ -4,8 +4,6 @@ services:
   bot:
     #build:
     #  context: .
-    #  dockerfile: Dockerfile
-    
     image: anton60874022/bot:latest
     restart: always
     #command: bash -c "python nko_bot.py"
@@ -19,7 +17,18 @@ services:
       - log_dir:/app/log_dir
 
   admin:
-    container_name: "admin"
+    image: anton60874022/admin:latest
+    restart: always
+      #command: bash -c "python nko_bot.py"
+    depends_on:
+        - mongodb
+      networks:
+        - db_network
+      env_file:
+        - .env
+      volumes:
+        - log_dir:/app/log_dir
+    '''container_name: "admin"
     image: admin
     build:
       context: .
@@ -34,7 +43,7 @@ services:
     env_file:
       - .env
     ports:
-      - 8000:8000
+      - 8000:8000'''
 
 
   mongodb:
