@@ -8,7 +8,7 @@ services:
     #  context: .
     image: anton60874022/bot:latest
     restart: always
-      command: bash -c "python nko_bot.py"
+    command: bash -c "python nko_bot.py"
     depends_on:
       - mongodb
     networks:
@@ -22,14 +22,14 @@ services:
     container_name: admin
     image: anton60874022/admin:latest
     restart: always
-      command: bash -c "python nko_bot.py"
+    command: bash -c "python nko_bot.py"
     depends_on:
         - mongodb
     networks:
         - db_network
     env_file:
         - .env
-    volumes:
+
   mongodb:
     image: "mongo:7.0.5"
     ports:
@@ -37,7 +37,7 @@ services:
     networks:
       - db_network
     env_file:
-      - .env.dev
+      - .env
     volumes:
       - log_dir:/app/log_dir
 
@@ -50,9 +50,9 @@ services:
       - "80:80"
     volumes:
       - static_value:/var/html/static/
-      - ./app/conf.d:/etc/nginx/conf.d 
+      - ./app/conf.d:/etc/nginx/conf.d
 
-      
+
 
     networks:
       - db_network

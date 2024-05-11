@@ -29,7 +29,7 @@ services:
     networks:
       - db_network
     env_file:
-      - .env.prod
+      - .env
     ports:
       - 8000:8000
 
