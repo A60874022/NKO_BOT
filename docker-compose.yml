@@ -8,7 +8,7 @@ services:
     #  context: .
     image: anton60874022/bot:latest
     restart: always
-    command: bash -c "python nko_bot.py"
+    #command: bash -c "python nko_bot.py"
     depends_on:
       - mongodb
     networks:
@@ -22,7 +22,7 @@ services:
     container_name: admin
     image: anton60874022/admin:latest
     restart: always
-    command: bash -c "python nko_bot.py"
+    #command: bash -c "python nko_bot.py"
     depends_on:
         - mongodb
     networks:
