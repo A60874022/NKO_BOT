@@ -20,7 +20,7 @@ services:
     image: admin
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile1
     command: bash -c "uvicorn admin. -  main:app --reload --host=0.0.0.0"
     volumes:
       - static_value:/app/backend/admin/statics/
