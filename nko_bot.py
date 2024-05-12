@@ -6,6 +6,9 @@ from dotenv import load_dotenv
 from bot.handlers.handlers import user_router
 
 LOGLEVEL = os.environ.get('LOGLEVEL', 'INFO').upper()
+MONGO_HOST = os.environ.get("MONGO_HOST", "localhost")
+MONGO_PORT = os.environ.get("MONGO_PORT", 27017)
+MONGO_URL = f"mongodb://{MONGO_HOST}:{MONGO_PORT}/"
 
 rotating_handler = RotatingFileHandler(
         filename="log_dir//program.log",
@@ -30,4 +33,5 @@ dp = Dispatcher()
 
 dp.include_router(user_router)
 if __name__ == '__main__':
+    print(MONGO_PORT, MONGO_HOST, MONGO_URL)
     dp.run_polling(bot)
