@@ -7,4 +7,5 @@ COPY requirements.txt .
 RUN python -m pip install --upgrade pip && \
     pip install -r requirements.txt --no-cache-dir
 COPY . .
-CMD ["python", "nko_bot.py"] 
+CMD ["python", "nko_bot.py"]
+#CMD ["uvicorn", "admin.main:app", "--host", "0.0.0.0", "--port", "8000"]

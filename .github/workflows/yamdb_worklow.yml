@@ -37,14 +37,14 @@ jobs:
         uses: docker/build-push-action@v2 
         with: 
            context: .
-           file: .Dockerfile 
+           file: .Dockerfile_bot
            push: true 
            tags: ${{ secrets.DOCKER_USERNAME }}/bot:latest
       - name: Push backend to Docker Hub 
         uses: docker/build-push-action@v2 
         with: 
            context:  .
-           file: .Dockerfile
+           file: .Dockerfile_admin
            push: true 
            tags: ${{ secrets.DOCKER_USERNAME }}/admin:latest
         
