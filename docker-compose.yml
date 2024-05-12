@@ -9,7 +9,7 @@ services:
     #  context: .
     image: anton60874022/bot:latest
     restart: always
-    command: bash -c "uvicorn admin.main:app --host 0.0.0.0 "
+    command: bash -c "python nko_bot.py"
     depends_on:
       - mongodb
     networks:
@@ -25,7 +25,7 @@ services:
     #  context: .
     image: anton60874022/admin:latest
     restart: always
-    command: bash -c ""
+    command: bash -c "uvicorn admin.main:app --reload --host=0.0.0.0"
     depends_on:
         - mongodb
     networks:
