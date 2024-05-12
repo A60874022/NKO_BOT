@@ -54,7 +54,7 @@ services:
       - "80:80"
     volumes:
        - static_value:/var/html/static/
-       - ./app/conf.d:/etc/nginx/conf.d
+       - ./conf.d:/etc/nginx/conf.d
 
 
 
