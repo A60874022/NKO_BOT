@@ -15,8 +15,8 @@ services:
       - db_network
     env_file:
       - .env
-    volumes:
-      - log_dir:/app/log_dir
+    #volumes:
+    #  - log_dir:/app/log_dir
 
   admin:
     container_name: admin
