@@ -8,7 +8,7 @@ services:
     #  context: .
     image: anton60874022/bot:latest
     restart: always
-    #command: bash -c "python nko_bot.py"
+    command: bash -c "python nko_bot.py"
     depends_on:
       - mongodb
     networks:
@@ -37,7 +37,7 @@ services:
     networks:
       - db_network
     env_file:
-      - .env.dev
+      - .env
     volumes:
       - log_dir:/app/log_dir
 

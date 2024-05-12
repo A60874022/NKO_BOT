@@ -19,7 +19,7 @@ cd backend
 
 Создайте env-file:
 ```python
-touch .env.dev
+touch .env
 ```
 
 Добавьте в env-file данные:
