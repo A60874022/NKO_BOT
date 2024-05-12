@@ -69,7 +69,8 @@ jobs:
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/admin:latest 
             sudo touch .env
             echo MONGO_PORT=${{ secrets.TELEGRAM_TOKEN }} >> .env
-            echo MONGO_HOST=${{ secrets.MONGO_HOST }} >> .env
+            echo -n 'mongodb://mongo-service:27017' |
+            #echo MONGO_HOST=${{ secrets.MONGO_HOST }} >> .env
             echo MONGO_PORT=${{ secrets.MONGO_PORT }} >> .env
             echo MONGO_PORT=${{ secrets.LOGLEVEL }} >> .env
             echo MONGO_PORT=${{ secrets.LOG }} >> .env
