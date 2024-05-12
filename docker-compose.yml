@@ -53,8 +53,8 @@ services:
     ports:
       - "80:80"
     volumes:
-       - static_value:/var/html/static/
-       - ./conf.d:/etc/nginx/conf.d
+      - static_value:/var/html/static/
+      - ./conf.d:/etc/nginx/conf.d
 
 
 
@@ -64,7 +64,7 @@ services:
 
 volumes:
    log_dir:
-#  static_value:
+   static_value:
 
 
 networks:
