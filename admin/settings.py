@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-SECRET = os.getenv("SECRET")
+SECRET =  os.getenv("SECRET")
 ADMIN = os.getenv("ADMIN")
 PASS = os.getenv("PASS")
 MONGO_HOST = os.environ.get("MONGO_HOST")

@@ -4,9 +4,12 @@ import base64
 from PIL import Image
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
+from dotenv import load_dotenv
 
-MONGO_HOST = os.environ.get("MONGO_HOST", "localhost")
-MONGO_PORT = os.environ.get("MONGO_PORT", 27017)
+
+load_dotenv()
+MONGO_HOST = os.getenv("MONGO_HOST", "localhost")
+MONGO_PORT = os.getenv("MONGO_PORT", 27017)
 
 
 MONGO_URL = f"mongodb://{MONGO_HOST}:{MONGO_PORT}/"
