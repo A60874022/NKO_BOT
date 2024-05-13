@@ -9,7 +9,7 @@ from bot.handlers.handlers import user_router
 
 
 rotating_handler = RotatingFileHandler(
-        filename="dir_log//program.log",
+        filename="program.log",
         maxBytes=50000000,
         backupCount=3,
         encoding="utf-8",

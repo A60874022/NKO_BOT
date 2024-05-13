@@ -42,7 +42,7 @@ services:
     env_file:
       - .env
     volumes:
-      - log_dir:/app/log_dir
+      - :/app/log_dir
 
 
   nginx:
@@ -63,7 +63,6 @@ services:
       - db_network
 
 volumes:
-   log_dir:
    static_value:
 
 
