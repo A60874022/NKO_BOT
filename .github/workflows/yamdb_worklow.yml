@@ -65,15 +65,15 @@ jobs:
             sudo docker-compose stop 
             sudo docker-compose rm bot
             sudo docker-compose rm admin 
-            sudo touch .env
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/bot:latest
-            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/admin:latest 
-            echo MONGO_PORT=${{ secrets.TELEGRAM_TOKEN }} >> .env
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/admin:latest
+            sudo touch .env
+            echo TELEGRAM_TOKEN=${{ secrets.TELEGRAM_TOKEN }} >> .env
             echo MONGO_HOST=${{ secrets.MONGO_HOST }} >> .env
             echo MONGO_PORT=${{ secrets.MONGO_PORT }} >> .env
-            echo MONGO_PORT=${{ secrets.LOGLEVEL }} >> .env
-            echo MONGO_PORT=${{ secrets.LOG }} >> .env
+            echo LOGLEVEL=${{ secrets.LOGLEVEL }} >> .env
+            echo LOG=${{ secrets.LOG }} >> .env
             echo SECRET=${{ secrets.SECRET }} >> .env
             echo ADMIN=${{ secrets.ADMIN }} >> .env
-            echo ADMIN=${{ secrets.admin_password }} >> .env
+            echo PASS=${{ secrets.PASS }} >> .env
             sudo docker compose up -d --build
