@@ -6,7 +6,7 @@ import os
 from motor.motor_asyncio import AsyncIOMotorClient
 
 
-MONGO_HOST = "127.0.0.1"#os.getenv("MONGO_HOST", "localhost")
+MONGO_HOST = "0.0.0.0"#os.getenv("MONGO_HOST", "localhost")
 MONGO_PORT = "27017"#os.getenv("MONGO_PORT", 27017)
 MONGO_URL = f"mongodb://{MONGO_HOST}:{MONGO_PORT}/"
 
