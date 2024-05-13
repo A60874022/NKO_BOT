@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
-MONGO_HOST = "0.0.0.0"#os.getenv("MONGO_HOST", "localhost")
+MONGO_HOST = "5.35.88.241"#os.getenv("MONGO_HOST", "localhost")
 MONGO_PORT = "27017"#os.getenv("MONGO_PORT", 27017)
 
 
