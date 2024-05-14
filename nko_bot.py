@@ -5,17 +5,17 @@ import os
 from dotenv import load_dotenv
 from bot.handlers.handlers import user_router
 
-#LOGLEVEL = os.environ.get('LOGLEVEL', 'INFO').upper()
+LOGLEVEL = os.environ.get('LOGLEVEL', 'INFO').upper()
 
 
 rotating_handler = RotatingFileHandler(
-        filename="log_dir//program.log",
+        filename="log_dir// root@5.35.88.241",
         maxBytes=50000000,
         backupCount=3,
         encoding="utf-8",
     )
 logging.basicConfig(
-    #level = LOGLEVEL,
+    level = LOGLEVEL,
     format='%(asctime)s, %(levelname)s, %(message)s, %(name)s',
     handlers=[rotating_handler],
 )
