@@ -15,7 +15,7 @@ rotating_handler = RotatingFileHandler(
         encoding="utf-8",
     )
 logging.basicConfig(
-    level = LOGLEVEL,
+    level =logging.INFO,
     format='%(asctime)s, %(levelname)s, %(message)s, %(name)s',
     handlers=[rotating_handler],
 )
