@@ -8,8 +8,8 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
-MONGO_HOST = "5.35.88.241"#os.getenv("MONGO_HOST", "localhost")
-MONGO_PORT = "27017"#os.getenv("MONGO_PORT", 27017)
+MONGO_HOST = os.getenv("MONGO_HOST", "localhost")
+MONGO_PORT = os.getenv("MONGO_PORT", 27017)
 
 
 MONGO_URL = f"mongodb://{MONGO_HOST}:{MONGO_PORT}"
