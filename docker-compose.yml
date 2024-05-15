@@ -64,8 +64,8 @@ services:
       - db_network
 
 volumes:
-   log_dir:
-   static_value:
+  log_dir:
+  static_value:
 
 
 networks:
