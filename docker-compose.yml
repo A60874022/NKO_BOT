@@ -59,7 +59,6 @@ services:
 
 
 
-
     networks:
       - db_network
 
