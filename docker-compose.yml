@@ -47,6 +47,7 @@ services:
       - log_dir:/app/log_dir
 
 
+
   nginx:
     container_name: "web"
     image: nginx:alpine
