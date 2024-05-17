@@ -48,7 +48,6 @@ services:
 
 
 
-
   nginx:
     container_name: "web"
     image: nginx:alpine
