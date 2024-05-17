@@ -58,7 +58,6 @@ services:
       - ./conf.d:/etc/nginx/conf.d
 
 
-
     networks:
       - db_network
 
