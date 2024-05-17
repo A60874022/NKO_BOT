@@ -33,6 +33,7 @@ services:
     env_file:
         - .env
 
+
   mongodb:
     image: "mongo:7.0.9"
     ports:
