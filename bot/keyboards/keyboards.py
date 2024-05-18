@@ -20,6 +20,7 @@ def start_keyboard():
     keyboard = InlineKeyboardMarkup(
         inline_keyboard=[[button_1],
                          [button_2], ])
+    print()
     return keyboard
 
 

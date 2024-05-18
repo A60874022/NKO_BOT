@@ -5,14 +5,9 @@ from PIL import Image
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 from dotenv import load_dotenv
+from admin.settings import MONGO_URL
 
 
-load_dotenv()
-MONGO_HOST = os.getenv("MONGO_HOST", "localhost")
-MONGO_PORT = os.getenv("MONGO_PORT", 27017)
-
-
-MONGO_URL = f"mongodb://{MONGO_HOST}:{MONGO_PORT}"
 
 client = AsyncIOMotorClient(MONGO_URL)
 collection = client.test.topic
@@ -21,6 +16,7 @@ image_collection = client.test.fs.chunks
 
 async def get_title():
     """Поиск информации в БД названий статей."""
+    print(MONGO_URL)
     documents = []
     cursor = await collection.find().to_list(None)
     for document in cursor:
