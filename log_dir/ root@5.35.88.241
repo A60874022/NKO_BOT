@@ -50,3 +50,15 @@
 2024-05-19 11:07:41,235, INFO, Update id=262329775 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
 2024-05-19 11:08:25,287, INFO, Polling stopped, aiogram.dispatcher
 2024-05-19 11:08:25,547, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-19 15:13:27,654, INFO, Start polling, aiogram.dispatcher
+2024-05-19 15:13:27,900, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-19 15:13:32,070, ERROR, Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running, aiogram.dispatcher
+2024-05-19 15:13:32,070, WARNING, Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6669158800), aiogram.dispatcher
+2024-05-19 15:13:39,172, INFO, Connection established (tryings = 1, bot id = 6669158800), aiogram.dispatcher
+2024-05-19 15:13:39,511, INFO, Update id=262329858 is handled. Duration 327 ms by bot id=6669158800, aiogram.event
+2024-05-19 15:13:40,917, INFO, Update id=262329859 is handled. Duration 109 ms by bot id=6669158800, aiogram.event
+2024-05-19 15:13:42,183, INFO, Update id=262329860 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-19 15:13:42,928, INFO, Update id=262329861 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-19 15:13:44,256, INFO, Update id=262329862 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-19 15:13:47,954, INFO, Polling stopped, aiogram.dispatcher
+2024-05-19 15:13:48,213, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
