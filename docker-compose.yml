@@ -4,8 +4,8 @@ version: '3.8'
 services:
   bot:
     container_name: bot
-    build:
-      context: .
+    #build:
+    #  context: .
     image: anton60874022/bot:latest
     command: bash -c "python nko_bot.py"
     restart: always
@@ -38,18 +38,18 @@ services:
   mongodb:
     image: "mongo:7.0.9"
     environment:
-      MONGO_INITDB_ROOT_USERNAME: ${DB_USER}
-      MONGO_INITDB_ROOT_PASSWORD: $DB_PASSWORD}
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
     ports:
-      - '27017:27017'
+      - $MONGO_PORT:$MONGO_PORT
     networks:
       - db_network
+    command: [--auth]
     env_file:
       - .env
     volumes:
       - log_dir:/app/log_dir
       - mongo_config:/etc/
-
 
 
   nginx:

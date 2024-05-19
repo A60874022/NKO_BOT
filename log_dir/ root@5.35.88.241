@@ -42,3 +42,11 @@
 2024-05-18 15:29:24,019, INFO, Update id=262329697 is handled. Duration 157 ms by bot id=6669158800, aiogram.event
 2024-05-18 15:29:45,152, INFO, Polling stopped, aiogram.dispatcher
 2024-05-18 15:29:45,400, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-19 11:07:35,108, INFO, Start polling, aiogram.dispatcher
+2024-05-19 11:07:35,403, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-19 11:07:37,773, INFO, Update id=262329772 is handled. Duration 312 ms by bot id=6669158800, aiogram.event
+2024-05-19 11:07:39,162, INFO, Update id=262329773 is handled. Duration 140 ms by bot id=6669158800, aiogram.event
+2024-05-19 11:07:40,473, INFO, Update id=262329774 is handled. Duration 93 ms by bot id=6669158800, aiogram.event
+2024-05-19 11:07:41,235, INFO, Update id=262329775 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-19 11:08:25,287, INFO, Polling stopped, aiogram.dispatcher
+2024-05-19 11:08:25,547, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher

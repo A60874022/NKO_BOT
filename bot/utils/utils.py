@@ -3,8 +3,6 @@ from io import BytesIO
 import base64
 from PIL import Image
 from motor.motor_asyncio import AsyncIOMotorClient
-import os
-from dotenv import load_dotenv
 from admin.settings import MONGO_URL
 
 
