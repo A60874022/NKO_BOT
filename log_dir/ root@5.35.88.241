@@ -79,3 +79,22 @@
 2024-05-20 18:39:51,889, INFO, Update id=262330190 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
 2024-05-20 18:40:44,155, INFO, Polling stopped, aiogram.dispatcher
 2024-05-20 18:40:44,406, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-21 21:37:19,863, INFO, Start polling, aiogram.dispatcher
+2024-05-21 21:37:20,174, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-21 21:37:27,762, INFO, Update id=262330373 is handled. Duration 250 ms by bot id=6669158800, aiogram.event
+2024-05-21 21:37:30,881, INFO, Update id=262330375 is handled. Duration 94 ms by bot id=6669158800, aiogram.event
+2024-05-21 21:37:59,376, ERROR, Ошибка при получении информации из БД: localhost#mongodb:27017: [Errno 11001] getaddrinfo failed (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 664ccdbf482d548bf55b1d45, topology_type: Unknown, servers: [<ServerDescription ('localhost#mongodb', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost#mongodb:27017: [Errno 11001] getaddrinfo failed (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>, bot.handlers.handlers
+2024-05-21 21:37:59,377, INFO, Update id=262330374 is handled. Duration 30062 ms by bot id=6669158800, aiogram.event
+2024-05-21 21:38:41,470, INFO, Polling stopped, aiogram.dispatcher
+2024-05-21 21:38:41,730, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-21 21:38:46,612, INFO, Start polling, aiogram.dispatcher
+2024-05-21 21:38:46,863, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-21 21:38:52,458, INFO, Update id=262330376 is handled. Duration 328 ms by bot id=6669158800, aiogram.event
+2024-05-21 21:38:53,781, INFO, Update id=262330377 is handled. Duration 110 ms by bot id=6669158800, aiogram.event
+2024-05-21 21:38:54,780, INFO, Update id=262330378 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-21 21:38:55,842, INFO, Update id=262330379 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-21 21:38:56,560, INFO, Update id=262330380 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-21 21:39:00,308, INFO, Update id=262330381 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-21 21:39:01,513, INFO, Update id=262330382 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-21 21:39:04,009, INFO, Polling stopped, aiogram.dispatcher
+2024-05-21 21:39:04,268, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher

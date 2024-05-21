@@ -2,13 +2,9 @@ import pytest
 import time
 import base64
 import os
-
+from admin.settings import MONGO_URL
 from motor.motor_asyncio import AsyncIOMotorClient
-MONGO_HOST = os.getenv("MONGO_HOST", "0.0.0.0")
-MONGO_PORT = os.getenv("MONGO_PORT", 27017)
-MONGO_INITDB_ROOT_USERNAME = os.getenv("MONGO_INITDB_ROOT_USERNAME", "Anton")
-MONGO_INITDB_ROOT_PASSWORD = os.getenv("MONGO_INITDB_ROOT_PASSWORD", "60874022")
-MONGO_URL = f"mongodb://{MONGO_INITDB_ROOT_USERNAME}:{MONGO_INITDB_ROOT_PASSWORD}@{MONGO_HOST}:{MONGO_PORT}"
+
 
 
 
