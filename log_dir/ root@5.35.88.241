@@ -62,3 +62,20 @@
 2024-05-19 15:13:44,256, INFO, Update id=262329862 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
 2024-05-19 15:13:47,954, INFO, Polling stopped, aiogram.dispatcher
 2024-05-19 15:13:48,213, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-20 18:39:10,306, INFO, Start polling, aiogram.dispatcher
+2024-05-20 18:39:10,589, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-20 18:39:18,685, INFO, Update id=262330182 is handled. Duration 266 ms by bot id=6669158800, aiogram.event
+2024-05-20 18:39:21,568, INFO, Update id=262330183 is handled. Duration 141 ms by bot id=6669158800, aiogram.event
+2024-05-20 18:39:26,272, INFO, Update id=262330184 is handled. Duration 108 ms by bot id=6669158800, aiogram.event
+2024-05-20 18:39:27,532, INFO, Update id=262330185 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-20 18:39:29,031, INFO, Update id=262330186 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-20 18:39:39,667, INFO, Polling stopped, aiogram.dispatcher
+2024-05-20 18:39:39,938, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-20 18:39:45,010, INFO, Start polling, aiogram.dispatcher
+2024-05-20 18:39:45,248, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-20 18:39:47,628, INFO, Update id=262330187 is handled. Duration 266 ms by bot id=6669158800, aiogram.event
+2024-05-20 18:39:49,084, INFO, Update id=262330188 is handled. Duration 218 ms by bot id=6669158800, aiogram.event
+2024-05-20 18:39:50,590, INFO, Update id=262330189 is handled. Duration 108 ms by bot id=6669158800, aiogram.event
+2024-05-20 18:39:51,889, INFO, Update id=262330190 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-20 18:40:44,155, INFO, Polling stopped, aiogram.dispatcher
+2024-05-20 18:40:44,406, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher

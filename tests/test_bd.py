@@ -4,11 +4,12 @@ import base64
 import os
 
 from motor.motor_asyncio import AsyncIOMotorClient
-MONGO_HOST = "127.0.0.1"#os.getenv("MONGO_HOST", "localhost")
+MONGO_HOST = os.getenv("MONGO_HOST", "0.0.0.0")
 MONGO_PORT = os.getenv("MONGO_PORT", 27017)
-DB_USER = os.getenv("DB_USER", "Anton")
-DB_PASSWORD = os.getenv("DB_PASSWORD", "6087402234")
-MONGO_URL = f"mongodb://{DB_USER}:{DB_PASSWORD}@{MONGO_HOST}:{MONGO_PORT}"
+MONGO_INITDB_ROOT_USERNAME = os.getenv("MONGO_INITDB_ROOT_USERNAME", "Anton")
+MONGO_INITDB_ROOT_PASSWORD = os.getenv("DB_PASSWORD", "60874022")
+MONGO_URL = f"mongodb://{MONGO_INITDB_ROOT_USERNAME}:{MONGO_INITDB_ROOT_PASSWORD}@{MONGO_HOST}:{MONGO_PORT}"
+
 
 
 

@@ -24,7 +24,7 @@ services:
     #build:
     #  context: .
     image: anton60874022/admin:latest
-    command: bash -c "uvicorn admin.main:app"
+    command: bash -c "uvicorn admin.main:app --reload --host=0.0.0.0"
     restart: always
     depends_on:
         - mongodb
@@ -36,12 +36,12 @@ services:
 
 
   mongodb:
-    image: "mongo:latest"
+    image: "mongo:7.0.5"
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
     ports:
-      - $MONGO_PORT:$MONGO_PORT
+      - 27017:27017
     networks:
       - db_network
     command: [--auth]
@@ -61,7 +61,7 @@ services:
       - "80:80"
     volumes:
       - static_value:/var/html/static/
-      - ./conf.d:/etc/nginx/conf.d
+      - ./app/conf.d:/etc/nginx/conf.d
 
 
     networks:
