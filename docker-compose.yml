@@ -19,7 +19,6 @@ services:
       - log_dir:/app/log_dir
 
 
-
   admin:
     container_name: admin
     #build:
