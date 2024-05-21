@@ -4,9 +4,9 @@ version: '3.8'
 services:
   bot:
     container_name: bot
-    #build:
-    #  context: .
-    image: anton60874022/bot:latest
+    build:
+      context: .
+    #image: anton60874022/bot:latest
     command: bash -c "python nko_bot.py"
     restart: always
     depends_on:
@@ -21,9 +21,9 @@ services:
 
   admin:
     container_name: admin
-    #build:
-    #  context: .
-    image: anton60874022/admin:latest
+    build:
+      context: .
+    #image: anton60874022/admin:latest
     command: bash -c "uvicorn admin.main:app --reload --host=0.0.0.0"
     restart: always
     depends_on:
