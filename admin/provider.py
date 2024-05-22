@@ -18,10 +18,11 @@ class MyAuthProvider(AuthProvider):
         response: Response,
     ) -> Response:
         user = User.objects(name=username)
+        print(user[0])
         if pwd_context.verify(password, user[0].password):
             request.session.update({"username": username})
             return response
-        raise LoginFailed(f"{username, password} - {user[0].password}")
+        raise LoginFailed("Invalid username or password")
 
     async def is_authenticated(self, request) -> bool:
         if User.objects(name=request.session.get("username", None)):
