@@ -2,9 +2,9 @@ from starlette.requests import Request
 from starlette.responses import Response
 from starlette_admin.auth import AuthProvider
 from starlette_admin.exceptions import LoginFailed
-from models import User
+from .models import User
 from passlib.context import CryptContext
-
+from .settings import MONGO_URL, SECRET, ADMIN, PASS
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
@@ -22,7 +22,7 @@ class MyAuthProvider(AuthProvider):
         if pwd_context.verify(password, user[0].password):
             request.session.update({"username": username})
             return response
-        raise LoginFailed("Invalid username or password")
+        raise LoginFailed(f"{PASS, password}, {username, ADMIN}")
 
     async def is_authenticated(self, request) -> bool:
         if User.objects(name=request.session.get("username", None)):
