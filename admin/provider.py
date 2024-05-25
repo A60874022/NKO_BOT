@@ -4,7 +4,7 @@ from starlette_admin.auth import AuthProvider
 from starlette_admin.exceptions import LoginFailed
 from .models import User
 from passlib.context import CryptContext
-from .settings import MONGO_URL, SECRET, ADMIN, PASS
+from .settings import MONGO_URL, SECRET
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
