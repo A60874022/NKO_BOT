@@ -4,8 +4,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 SECRET =  os.getenv("SECRET")
-ADMIN = os.getenv("ADMIN")
-PASS = os.getenv("PASS")
 MONGO_HOST = os.getenv("MONGO_HOST", "mongodb")
 MONGO_PORT = os.getenv("MONGO_PORT", "27017")
 MONGO_INITDB_ROOT_USERNAME = os.getenv("MONGO_INITDB_ROOT_USERNAME", "Anton")
