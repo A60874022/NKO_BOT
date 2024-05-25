@@ -19,9 +19,9 @@ class MyAuthProvider(AuthProvider):
     ) -> Response:
         user = User.objects(name=username)
         print(user[0])
-        #if pwd_context.verify(password, user[0].password):
-        request.session.update({"username": username})
-        return response
+        if pwd_context.verify(password, user[0].password):
+            request.session.update({"username": username})
+            return response
         raise LoginFailed(f"{PASS, password}, {username, ADMIN}, {password, user[0].password}" )
 
     async def is_authenticated(self, request) -> bool:
