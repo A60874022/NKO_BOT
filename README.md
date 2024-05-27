@@ -24,13 +24,14 @@ touch .env
 
 Добавьте в env-file данные:
 ```python
-TELEGRAM_TOKEN=телеграм_токен_бота
-MONGO_HOST=
-MONGO_PORT=
-LOGLEVEL=(установите уровень логирования)
+TELEGRAM_TOKEN=123
+MONGO_PORT=27017
+MONGO_INITDB_ROOT_USERNAME=Anton
+MONGO_INITDB_ROOT_PASSWORD=rt105112up0073!
+LOGLEVEL=INFO
+LOG = False
 SECRET=secret
-ADMIN=admin_name
-PASS=admin_password
+MONGO_HOST=mongodb
 ```
 
 Cоздайте и активируйте виртуальное окружение:

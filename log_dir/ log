@@ -1,0 +1,823 @@
+2024-05-27 18:21:14,641, INFO, Start polling, aiogram.dispatcher
+2024-05-27 18:21:15,175, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 18:21:15,689, INFO, Update id=262330655 is handled. Duration 405 ms by bot id=6669158800, aiogram.event
+2024-05-27 18:21:15,727, INFO, Update id=262330656 is handled. Duration 452 ms by bot id=6669158800, aiogram.event
+2024-05-27 18:21:43,541, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 18:21:43,799, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 18:21:48,816, INFO, Start polling, aiogram.dispatcher
+2024-05-27 18:21:49,075, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 18:22:19,636, INFO, Update id=262330657 is handled. Duration 358 ms by bot id=6669158800, aiogram.event
+2024-05-27 18:22:20,892, INFO, Update id=262330658 is handled. Duration 92 ms by bot id=6669158800, aiogram.event
+2024-05-27 18:22:22,039, INFO, Update id=262330659 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 18:29:19,275, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 18:29:19,529, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 18:42:11,887, INFO, Start polling, aiogram.dispatcher
+2024-05-27 18:42:12,195, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 18:42:15,626, INFO, Update id=262330660 is handled. Duration 297 ms by bot id=6669158800, aiogram.event
+2024-05-27 18:42:17,014, INFO, Update id=262330661 is handled. Duration 202 ms by bot id=6669158800, aiogram.event
+2024-05-27 18:42:18,375, INFO, Update id=262330662 is handled. Duration 202 ms by bot id=6669158800, aiogram.event
+2024-05-27 18:53:41,373, INFO, Update id=262330663 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 18:53:44,656, INFO, Update id=262330664 is handled. Duration 422 ms by bot id=6669158800, aiogram.event
+2024-05-27 18:53:46,031, INFO, Update id=262330665 is handled. Duration 109 ms by bot id=6669158800, aiogram.event
+2024-05-27 18:53:48,290, INFO, Update id=262330666 is handled. Duration 109 ms by bot id=6669158800, aiogram.event
+2024-05-27 18:53:49,953, INFO, Update id=262330667 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 18:54:41,754, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 18:54:42,016, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 18:54:47,117, INFO, Start polling, aiogram.dispatcher
+2024-05-27 18:54:47,360, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 18:54:50,390, INFO, Update id=262330668 is handled. Duration 280 ms by bot id=6669158800, aiogram.event
+2024-05-27 18:54:51,811, INFO, Update id=262330669 is handled. Duration 187 ms by bot id=6669158800, aiogram.event
+2024-05-27 18:54:53,091, INFO, Update id=262330670 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-27 18:54:54,640, INFO, Update id=262330671 is not handled. Duration 92 ms by bot id=6669158800, aiogram.event
+2024-05-27 18:54:54,641, ERROR, Cause exception while process update id=262330671 by bot id=6669158800
+TelegramBadRequest: Telegram server says - Bad Request: MESSAGE_TOO_LONG, aiogram.event
+Traceback (most recent call last):
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\bot\handlers\handlers.py", line 36, in process_start_command
+    await message.answer(
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\client\bot.py", line 492, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 178, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: MESSAGE_TOO_LONG
+2024-05-27 18:57:50,017, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 18:57:50,282, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 18:57:54,679, INFO, Start polling, aiogram.dispatcher
+2024-05-27 18:57:54,914, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 18:58:56,817, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 18:58:57,081, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 18:59:01,638, INFO, Start polling, aiogram.dispatcher
+2024-05-27 18:59:01,913, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 18:59:02,882, INFO, Update id=262330672 is handled. Duration 405 ms by bot id=6669158800, aiogram.event
+2024-05-27 18:59:04,099, INFO, Update id=262330673 is handled. Duration 172 ms by bot id=6669158800, aiogram.event
+2024-05-27 18:59:05,341, INFO, Update id=262330674 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-27 18:59:06,358, INFO, Update id=262330675 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:09:30,602, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:09:30,857, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:09:36,968, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:09:37,277, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:09:55,632, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:09:55,891, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:10:00,619, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:10:00,868, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:10:02,462, INFO, Update id=262330676 is handled. Duration 311 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:10:03,762, INFO, Update id=262330677 is handled. Duration 187 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:10:04,785, INFO, Update id=262330678 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:10:08,644, INFO, Update id=262330679 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:13:15,968, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:13:16,226, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:13:21,238, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:13:21,569, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:25:58,144, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:25:58,396, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:26:02,876, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:26:03,204, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:26:08,751, INFO, Update id=262330680 is handled. Duration 297 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:26:10,099, INFO, Update id=262330681 is handled. Duration 172 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:26:11,424, INFO, Update id=262330682 is handled. Duration 109 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:26:13,099, INFO, Update id=262330683 is not handled. Duration 16 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:26:13,099, ERROR, Cause exception while process update id=262330683 by bot id=6669158800
+TypeError: Message.answer() missing 1 required positional argument: 'text', aiogram.event
+Traceback (most recent call last):
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\bot\handlers\handlers.py", line 116, in process_back_command
+    await callback.message.answer(
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Message.answer() missing 1 required positional argument: 'text'
+2024-05-27 19:26:36,183, INFO, Update id=262330684 is handled. Duration 265 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:26:39,374, INFO, Update id=262330685 is handled. Duration 234 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:26:46,147, INFO, Update id=262330686 is handled. Duration 172 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:26:47,479, INFO, Update id=262330687 is handled. Duration 109 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:26:49,213, INFO, Update id=262330688 is handled. Duration 233 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:26:53,690, INFO, Update id=262330689 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:26:55,144, INFO, Update id=262330690 is handled. Duration 92 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:26:57,083, INFO, Update id=262330691 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:27:00,587, INFO, Update id=262330692 is handled. Duration 295 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:27:02,344, INFO, Update id=262330693 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:27:02,344, ERROR, Cause exception while process update id=262330693 by bot id=6669158800
+TypeError: Message.answer() missing 1 required positional argument: 'text', aiogram.event
+Traceback (most recent call last):
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\bot\handlers\handlers.py", line 116, in process_back_command
+    await callback.message.answer(
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Message.answer() missing 1 required positional argument: 'text'
+2024-05-27 19:27:28,697, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:27:28,949, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:27:33,542, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:27:33,787, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:27:34,671, INFO, Update id=262330694 is handled. Duration 282 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:27:36,309, INFO, Update id=262330695 is handled. Duration 390 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:27:37,504, INFO, Update id=262330696 is handled. Duration 93 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:27:38,726, INFO, Update id=262330697 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:27:38,728, ERROR, Cause exception while process update id=262330697 by bot id=6669158800
+TypeError: Message.answer() missing 1 required positional argument: 'text', aiogram.event
+Traceback (most recent call last):
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\bot\handlers\handlers.py", line 117, in process_back_command
+    await callback.message.answer(
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Message.answer() missing 1 required positional argument: 'text'
+2024-05-27 19:29:40,145, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:29:40,406, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:29:45,107, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:29:45,354, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:29:46,424, INFO, Update id=262330698 is handled. Duration 282 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:29:47,484, INFO, Update id=262330699 is handled. Duration 156 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:29:48,499, INFO, Update id=262330700 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:29:49,640, INFO, Update id=262330701 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:29:54,810, INFO, Update id=262330702 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:31:01,120, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:31:01,376, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:31:05,732, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:31:06,025, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:31:09,481, INFO, Update id=262330703 is handled. Duration 312 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:31:11,143, INFO, Update id=262330704 is handled. Duration 172 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:31:28,727, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:31:28,982, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:31:33,490, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:31:33,743, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:31:35,782, INFO, Update id=262330705 is handled. Duration 281 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:31:37,002, INFO, Update id=262330706 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:31:38,062, INFO, Update id=262330707 is handled. Duration 109 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:31:39,810, INFO, Update id=262330708 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:31:39,811, ERROR, Cause exception while process update id=262330708 by bot id=6669158800
+KeyError: 'Назад', aiogram.event
+Traceback (most recent call last):
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\bot\handlers\handlers.py", line 117, in process_back_command
+    await callback.message.answer(LEXICON["Назад"], reply_markup=start_keyboard())
+                                  ~~~~~~~^^^^^^^^^
+KeyError: 'Назад'
+2024-05-27 19:32:15,992, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:32:16,256, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:32:28,077, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:32:28,322, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:32:28,780, INFO, Update id=262330709 is handled. Duration 359 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:32:29,959, INFO, Update id=262330710 is handled. Duration 295 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:32:31,167, INFO, Update id=262330711 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:32:32,447, INFO, Update id=262330712 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:32:32,447, ERROR, Cause exception while process update id=262330712 by bot id=6669158800
+KeyError: 'Назад', aiogram.event
+Traceback (most recent call last):
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\bot\handlers\handlers.py", line 117, in process_back_command
+    await callback.message.answer(text=LEXICON["Назад"],
+                                      ~~~~~~~^^^^^^^^^
+KeyError: 'Назад'
+2024-05-27 19:32:50,432, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:32:50,687, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:32:54,989, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:32:55,257, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:33:13,735, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:33:13,990, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:33:18,429, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:33:18,673, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:33:19,083, INFO, Update id=262330713 is handled. Duration 280 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:33:20,522, INFO, Update id=262330714 is handled. Duration 188 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:33:21,732, INFO, Update id=262330715 is handled. Duration 156 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:33:23,311, INFO, Update id=262330716 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:33:23,311, ERROR, Cause exception while process update id=262330716 by bot id=6669158800
+KeyError: 'Назад', aiogram.event
+Traceback (most recent call last):
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\bot\handlers\handlers.py", line 117, in process_back_command
+    await callback.message.answer(text=LEXICON["Назад"],
+                                      ~~~~~~~^^^^^^^^^
+KeyError: 'Назад'
+2024-05-27 19:35:53,864, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:35:54,117, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:35:58,881, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:35:59,135, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:36:00,035, INFO, Update id=262330717 is handled. Duration 375 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:36:01,108, INFO, Update id=262330718 is handled. Duration 219 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:36:02,283, INFO, Update id=262330719 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:36:03,670, INFO, Update id=262330720 is handled. Duration 109 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:36:05,407, INFO, Update id=262330721 is handled. Duration 328 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:36:31,912, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:36:32,165, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:36:38,199, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:36:38,487, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:36:41,461, INFO, Update id=262330722 is handled. Duration 311 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:36:42,472, INFO, Update id=262330723 is handled. Duration 186 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:36:43,459, INFO, Update id=262330724 is handled. Duration 140 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:36:44,763, INFO, Update id=262330725 is handled. Duration 250 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:37:00,264, INFO, Update id=262330726 is handled. Duration 390 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:37:01,521, INFO, Update id=262330727 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:37:02,480, INFO, Update id=262330728 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:37:05,332, INFO, Update id=262330729 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:37:58,064, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:37:58,314, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:38:03,713, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:38:03,954, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:38:10,540, INFO, Update id=262330730 is handled. Duration 297 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:38:12,597, INFO, Update id=262330731 is handled. Duration 155 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:38:21,293, INFO, Update id=262330732 is handled. Duration 219 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:38:22,740, INFO, Update id=262330733 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:38:23,789, INFO, Update id=262330734 is handled. Duration 204 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:39:48,377, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:39:48,628, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:39:58,211, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:39:58,441, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:40:07,490, INFO, Update id=262330735 is handled. Duration 422 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:40:08,701, INFO, Update id=262330736 is handled. Duration 187 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:40:09,783, INFO, Update id=262330737 is handled. Duration 141 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:40:14,557, INFO, Update id=262330738 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:40:14,558, ERROR, Cause exception while process update id=262330738 by bot id=6669158800
+KeyError: 'Назад', aiogram.event
+Traceback (most recent call last):
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\bot\handlers\handlers.py", line 116, in process_back_command
+    await callback.message.answer(LEXICON["Назад"], reply_markup = start_keyboard())
+                                 ~~~~~~~^^^^^^^^^
+KeyError: 'Назад'
+2024-05-27 19:41:03,840, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:41:04,105, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:41:08,418, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:41:08,665, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:41:11,460, INFO, Update id=262330739 is handled. Duration 250 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:41:12,606, INFO, Update id=262330740 is handled. Duration 141 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:41:13,487, INFO, Update id=262330741 is handled. Duration 94 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:41:14,775, INFO, Update id=262330742 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:41:14,775, ERROR, Cause exception while process update id=262330742 by bot id=6669158800
+KeyError: 'Назад', aiogram.event
+Traceback (most recent call last):
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\bot\nko_bot\backend\bot\handlers\handlers.py", line 116, in process_back_command
+    await callback.message.answer(LEXICON["Назад"],
+                                 ~~~~~~~^^^^^^^^^
+KeyError: 'Назад'
+2024-05-27 19:42:15,736, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:42:15,989, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:42:20,448, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:42:20,774, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:42:21,141, INFO, Update id=262330743 is handled. Duration 265 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:42:22,486, INFO, Update id=262330744 is handled. Duration 141 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:42:23,361, ERROR, Ошибка при получении информации из БД: 'Назад', bot.handlers.handlers
+2024-05-27 19:42:23,362, INFO, Update id=262330745 is handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:42:26,591, INFO, Update id=262330746 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:42:28,656, INFO, Update id=262330747 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:42:51,245, INFO, Update id=262330748 is handled. Duration 282 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:42:54,759, INFO, Update id=262330749 is handled. Duration 140 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:42:56,575, INFO, Update id=262330750 is handled. Duration 109 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:42:57,761, INFO, Update id=262330751 is handled. Duration 155 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:42:58,567, ERROR, Ошибка при получении информации из БД: 'Назад', bot.handlers.handlers
+2024-05-27 19:42:58,567, INFO, Update id=262330752 is handled. Duration 15 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:43:14,832, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:43:15,095, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:43:51,974, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:43:52,222, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:43:53,246, INFO, Update id=262330753 is handled. Duration 327 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:43:54,500, INFO, Update id=262330754 is handled. Duration 140 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:43:55,953, ERROR, Ошибка при получении информации из БД: 'Назад', bot.handlers.handlers
+2024-05-27 19:43:55,954, INFO, Update id=262330755 is handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:44:18,615, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:44:18,874, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:44:23,881, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:44:24,106, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:44:25,368, INFO, Update id=262330756 is handled. Duration 282 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:44:26,623, INFO, Update id=262330757 is handled. Duration 140 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:44:27,402, ERROR, Ошибка при получении информации из БД: 'Назад', bot.handlers.handlers
+2024-05-27 19:44:27,402, INFO, Update id=262330758 is handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:44:28,720, INFO, Update id=262330759 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:44:29,772, INFO, Update id=262330760 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:44:43,416, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:44:43,681, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:44:48,513, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:44:48,739, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:44:50,345, INFO, Update id=262330761 is handled. Duration 390 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:44:51,364, INFO, Update id=262330762 is handled. Duration 157 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:44:52,115, ERROR, Ошибка при получении информации из БД: 'Назад', bot.handlers.handlers
+2024-05-27 19:44:52,115, INFO, Update id=262330763 is handled. Duration 15 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:44:53,429, INFO, Update id=262330764 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:44:54,237, INFO, Update id=262330765 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:44:56,458, INFO, Update id=262330766 is handled. Duration 108 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:45:09,981, INFO, Update id=262330767 is handled. Duration 422 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:45:11,529, ERROR, Ошибка при получении информации из БД: 'Назад', bot.handlers.handlers
+2024-05-27 19:45:11,530, INFO, Update id=262330768 is handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:45:50,075, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:45:50,338, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:45:55,617, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:45:55,852, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:45:57,116, INFO, Update id=262330769 is handled. Duration 297 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:45:58,512, INFO, Update id=262330770 is handled. Duration 233 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:45:59,206, ERROR, Ошибка при получении информации из БД: 'Назад', bot.handlers.handlers
+2024-05-27 19:45:59,207, INFO, Update id=262330771 is handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:46:29,288, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:46:29,446, ERROR, Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 1] [SSL: APPLICATION_DATA_AFTER_CLOSE_NOTIFY] application data after close notify (_ssl.c:2706), aiogram.dispatcher
+2024-05-27 19:46:29,446, WARNING, Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6669158800), aiogram.dispatcher
+2024-05-27 19:46:29,552, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:46:34,067, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:46:34,310, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:46:34,677, INFO, Update id=262330772 is handled. Duration 280 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:46:35,666, INFO, Update id=262330773 is handled. Duration 157 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:46:36,435, ERROR, Ошибка при получении информации из БД: 'Назад', bot.handlers.handlers
+2024-05-27 19:46:36,436, INFO, Update id=262330774 is handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:47:36,608, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:47:36,862, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:47:41,630, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:47:41,955, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:47:43,971, INFO, Update id=262330775 is handled. Duration 265 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:47:45,203, INFO, Update id=262330776 is handled. Duration 155 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:47:45,993, ERROR, Ошибка при получении информации из БД: 'Назад', bot.handlers.handlers
+2024-05-27 19:47:45,993, INFO, Update id=262330777 is handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:48:02,087, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:48:02,358, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:48:06,985, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:48:07,247, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:48:09,154, INFO, Update id=262330778 is handled. Duration 313 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:48:10,254, INFO, Update id=262330779 is handled. Duration 155 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:48:11,055, INFO, Update id=262330780 is handled. Duration 109 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:48:53,081, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:48:53,346, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:48:57,899, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:48:58,135, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:49:00,085, INFO, Update id=262330781 is handled. Duration 390 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:49:01,253, INFO, Update id=262330782 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:49:01,991, ERROR, Ошибка при получении информации из БД: 'Назад', bot.handlers.handlers
+2024-05-27 19:49:01,992, INFO, Update id=262330783 is handled. Duration 15 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:49:03,150, INFO, Update id=262330784 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:49:04,687, INFO, Update id=262330785 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:49:05,942, INFO, Update id=262330786 is handled. Duration 140 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:49:06,894, ERROR, Ошибка при получении информации из БД: 'Назад', bot.handlers.handlers
+2024-05-27 19:49:06,895, INFO, Update id=262330787 is handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:50:02,608, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:50:02,865, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:50:07,650, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:50:07,897, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:50:08,345, INFO, Update id=262330788 is handled. Duration 342 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:50:09,980, INFO, Update id=262330789 is handled. Duration 266 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:50:10,833, ERROR, Ошибка при получении информации из БД: 'Назад', bot.handlers.handlers
+2024-05-27 19:50:10,833, INFO, Update id=262330790 is handled. Duration 15 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:50:12,111, INFO, Update id=262330791 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:50:12,887, INFO, Update id=262330792 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:51:28,714, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:51:28,972, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:51:33,949, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:51:34,183, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:51:36,933, INFO, Update id=262330793 is handled. Duration 422 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:51:37,897, INFO, Update id=262330794 is handled. Duration 156 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:51:38,933, INFO, Update id=262330795 is handled. Duration 140 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:51:40,091, INFO, Update id=262330796 is handled. Duration 186 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:51:41,406, INFO, Update id=262330797 is handled. Duration 156 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:51:42,385, INFO, Update id=262330798 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:51:43,639, INFO, Update id=262330799 is handled. Duration 187 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:52:55,439, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:52:55,695, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:53:10,000, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:53:10,309, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:53:13,100, INFO, Update id=262330800 is handled. Duration 391 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:53:15,057, INFO, Update id=262330801 is handled. Duration 155 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:53:16,447, INFO, Update id=262330802 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:53:17,767, INFO, Update id=262330803 is handled. Duration 233 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:53:19,302, INFO, Update id=262330804 is handled. Duration 140 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:53:20,273, INFO, Update id=262330805 is handled. Duration 109 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:53:21,320, INFO, Update id=262330806 is handled. Duration 109 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:53:22,319, INFO, Update id=262330807 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:53:25,620, INFO, Update id=262330808 is handled. Duration 140 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:55:07,896, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:55:08,160, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:55:13,055, INFO, Start polling, aiogram.dispatcher
+2024-05-27 19:55:13,306, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-05-27 19:55:18,118, INFO, Update id=262330809 is handled. Duration 327 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:55:19,774, INFO, Update id=262330810 is handled. Duration 250 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:55:20,812, INFO, Update id=262330811 is handled. Duration 234 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:55:22,017, INFO, Update id=262330812 is handled. Duration 140 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:55:23,110, INFO, Update id=262330813 is handled. Duration 172 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:55:24,219, INFO, Update id=262330814 is handled. Duration 125 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:55:25,230, INFO, Update id=262330815 is handled. Duration 172 ms by bot id=6669158800, aiogram.event
+2024-05-27 19:55:30,775, INFO, Polling stopped, aiogram.dispatcher
+2024-05-27 19:55:31,034, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher

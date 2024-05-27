@@ -9,7 +9,9 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import FSInputFile
 
-from bot.keyboards.keyboards import information_keyboard, start_keyboard
+from bot.keyboards.keyboards import (information_keyboard,
+                                     start_keyboard,
+                                     back_keyboard)
 from bot.lexicon.lexicon import LEXICON
 from bot.utils.utils import (get_title,
                              get_information_title,
@@ -70,7 +72,8 @@ async def get_information(callback: CallbackQuery, state: FSMContext, bot):
                     LEXICON["Нет информации по теме"],
                 )
             await state.clear()
-            return
+            await callback.message.answer(LEXICON["Назад"],
+                                          reply_markup=start_keyboard())
         file_id = information_title.get('image', False)
         if file_id:
             await get_image(file_id)
@@ -78,7 +81,8 @@ async def get_information(callback: CallbackQuery, state: FSMContext, bot):
             await callback.bot.send_photo(callback.message.chat.id,
                                           FSInputFile(file))
             os.remove("image.png")
-        await callback.message.answer(f"{description}")
+        await callback.message.answer(f"{description}",
+                                      reply_markup=back_keyboard(),)
     except Exception as err:
         logger.error(f"Ошибка при получении информации из БД: {err}")
     finally:
@@ -109,3 +113,10 @@ async def process_team_name(message: Message, state: FSMContext):
     except Exception as err:
         logger.error(f"Ошибка при получении информации из БД: {err}")
         await state.clear()
+
+
+@user_router.callback_query(F.data == "back",)
+async def process_back_command(callback: CallbackQuery):
+    """Воврат в главное меню"""
+    await callback.message.answer(LEXICON["Назад"],
+                                  reply_markup=start_keyboard())

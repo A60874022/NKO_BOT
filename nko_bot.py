@@ -9,13 +9,13 @@ LOGLEVEL = os.environ.get('LOGLEVEL', 'INFO').upper()
 
 
 rotating_handler = RotatingFileHandler(
-        filename="log_dir// root@5.35.88.241",
+        filename="log_dir// log",
         maxBytes=50000000,
         backupCount=3,
         encoding="utf-8",
     )
 logging.basicConfig(
-    level =logging.ERROR,
+    level =logging.INFO,
     format='%(asctime)s, %(levelname)s, %(message)s, %(name)s',
     handlers=[rotating_handler],
 )

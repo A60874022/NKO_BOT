@@ -20,7 +20,6 @@ def start_keyboard():
     keyboard = InlineKeyboardMarkup(
         inline_keyboard=[[button_1],
                          [button_2], ])
-    print()
     return keyboard
 
 
@@ -35,3 +34,13 @@ def information_keyboard(documents):
                 callback_data=f"{button}"))
     kb_builder.row(*buttons, width=1)
     return kb_builder.as_markup()
+
+
+def back_keyboard():
+    """Клавиатура возврата ме."""
+    button = InlineKeyboardButton(
+        text=BUTTONS["Назад"],
+        callback_data="back"
+    )
+    markup = InlineKeyboardMarkup(inline_keyboard=[[button]])
+    return markup
