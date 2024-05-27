@@ -106,6 +106,8 @@ async def process_team_name(message: Message, state: FSMContext):
                     LEXICON["Слово отсутствует"],
                 )
             await state.clear()
+            await message.answer(LEXICON["Назад"],
+                                 reply_markup=start_keyboard())
             return
         await state.set_state(Data.title)
         await message.answer(LEXICON["Тема"],
