@@ -17,9 +17,14 @@ def start_keyboard():
         text=BUTTONS["Поиск слов"],
         callback_data="word_information"
     )
+    button_3 = InlineKeyboardButton(
+        text=BUTTONS["Интересующие вопросы"],
+        callback_data="questions"
+    )
     keyboard = InlineKeyboardMarkup(
         inline_keyboard=[[button_1],
-                         [button_2], ])
+                         [button_2],
+                         [button_3], ])
     return keyboard
 
 

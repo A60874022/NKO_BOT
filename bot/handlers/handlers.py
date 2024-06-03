@@ -1,17 +1,21 @@
 import logging
 import os
 
-from aiogram import F, Router
+from aiogram import F, Router, types
 from aiogram.types import CallbackQuery, Message
 from aiogram.filters import CommandStart
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import FSInputFile
-
+from aiogram.types import Message
+from aiogram.exceptions import TelegramBadRequest
+from bot.utils.text_mapper import extract_text_from_response
+from bot.utils.message_gpt import send_message
 from bot.keyboards.keyboards import (information_keyboard,
                                      start_keyboard,
                                      back_keyboard)
+
 from bot.lexicon.lexicon import LEXICON
 from bot.utils.utils import (get_title,
                              get_information_title,
@@ -30,6 +34,7 @@ class Data(StatesGroup):
 
     information = State()
     title = State()
+    gpt = State()
 
 
 @user_router.message(CommandStart())
@@ -108,7 +113,6 @@ async def process_team_name(message: Message, state: FSMContext):
             await state.clear()
             await message.answer(LEXICON["Назад"],
                                  reply_markup=start_keyboard())
-            return
         await state.set_state(Data.title)
         await message.answer(LEXICON["Тема"],
                              reply_markup=information_keyboard(word),)
@@ -122,3 +126,35 @@ async def process_back_command(callback: CallbackQuery):
     """Воврат в главное меню"""
     await callback.message.answer(LEXICON["Назад"],
                                   reply_markup=start_keyboard())
+
+@user_router.callback_query(F.data == "back",)
+async def process_back_command(callback: CallbackQuery):
+    """Воврат в главное меню"""
+    await callback.message.answer(LEXICON["Назад"],
+                                  reply_markup=start_keyboard())
+    
+
+@user_router.callback_query(F.data == "questions",)
+async def ai_message_handler(callback: CallbackQuery, state: FSMContext) -> None:
+    await state.set_state(Data.gpt)
+    await callback.message.answer(LEXICON["Искусственный интелект"])
+
+
+@user_router.message(Data.gpt)
+async def ai_message_handler(message: types.Message, state: FSMContext) -> None:
+    try:
+        await message.bot.send_chat_action(message.chat.id, "typing")
+        if message.text:
+            try:
+                await message.answer(extract_text_from_response(send_message(message.text)))
+            except TelegramBadRequest:
+                await message.answer("Не хочу об этом говорить")
+
+        else:
+            await message.answer("Я могу отвечать только на текстовые сообщения!")
+    except TypeError:
+        await message.answer("Произошла ошибка при обработке сообщения.")
+    finally:
+        
+        await state.clear()
+       

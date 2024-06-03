@@ -821,3 +821,34 @@ KeyError: 'Назад'
 2024-05-27 19:55:25,230, INFO, Update id=262330815 is handled. Duration 172 ms by bot id=6669158800, aiogram.event
 2024-05-27 19:55:30,775, INFO, Polling stopped, aiogram.dispatcher
 2024-05-27 19:55:31,034, INFO, Polling stopped for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-06-02 16:45:02,429, INFO, Start polling, aiogram.dispatcher
+2024-06-02 16:45:02,771, INFO, Run polling for bot @anton3073_bot id=6669158800 - 'anton3073', aiogram.dispatcher
+2024-06-02 16:45:17,562, INFO, Update id=262330978 is handled. Duration 266 ms by bot id=6669158800, aiogram.event
+2024-06-02 16:45:19,792, INFO, Update id=262330979 is handled. Duration 108 ms by bot id=6669158800, aiogram.event
+2024-06-02 16:45:31,823, INFO, Update id=262330980 is handled. Duration 969 ms by bot id=6669158800, aiogram.event
+2024-06-02 16:50:12,179, INFO, Update id=262330981 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-06-02 16:50:20,361, INFO, Update id=262330982 is handled. Duration 296 ms by bot id=6669158800, aiogram.event
+2024-06-02 16:50:27,319, INFO, Update id=262330983 is handled. Duration 937 ms by bot id=6669158800, aiogram.event
+2024-06-02 16:51:33,752, INFO, Update id=262330984 is handled. Duration 407 ms by bot id=6669158800, aiogram.event
+2024-06-02 16:51:35,471, INFO, Update id=262330985 is handled. Duration 108 ms by bot id=6669158800, aiogram.event
+2024-06-02 16:51:46,445, INFO, Update id=262330986 is handled. Duration 859 ms by bot id=6669158800, aiogram.event
+2024-06-02 16:52:12,168, INFO, Update id=262330987 is handled. Duration 280 ms by bot id=6669158800, aiogram.event
+2024-06-02 16:52:13,858, INFO, Update id=262330988 is handled. Duration 92 ms by bot id=6669158800, aiogram.event
+2024-06-02 16:52:28,554, INFO, Update id=262330989 is handled. Duration 1109 ms by bot id=6669158800, aiogram.event
+2024-06-02 16:53:15,239, INFO, Update id=262330991 is handled. Duration 312 ms by bot id=6669158800, aiogram.event
+2024-06-02 16:53:33,513, ERROR, Ошибка при получении информации из БД: mongodb:27017: [Errno 11001] getaddrinfo failed (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 665c5b3e857995efe2e6b998, topology_type: Unknown, servers: [<ServerDescription ('mongodb', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('mongodb:27017: [Errno 11001] getaddrinfo failed (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>, bot.handlers.handlers
+2024-06-02 16:53:33,514, INFO, Update id=262330990 is handled. Duration 30110 ms by bot id=6669158800, aiogram.event
+2024-06-02 16:53:56,152, INFO, Update id=262330992 is not handled. Duration 0 ms by bot id=6669158800, aiogram.event
+2024-06-02 16:54:24,369, INFO, Update id=262330993 is handled. Duration 328 ms by bot id=6669158800, aiogram.event
+2024-06-02 16:54:25,577, INFO, Update id=262330994 is handled. Duration 109 ms by bot id=6669158800, aiogram.event
+2024-06-02 16:54:44,080, INFO, Update id=262330995 is handled. Duration 1077 ms by bot id=6669158800, aiogram.event
+2024-06-02 16:54:56,593, INFO, Update id=262330996 is handled. Duration 250 ms by bot id=6669158800, aiogram.event
+2024-06-02 16:55:19,975, INFO, Update id=262330997 is handled. Duration 1280 ms by bot id=6669158800, aiogram.event
+2024-06-02 17:00:27,237, INFO, Update id=262330998 is handled. Duration 281 ms by bot id=6669158800, aiogram.event
+2024-06-02 17:00:38,835, INFO, Update id=262330999 is handled. Duration 187 ms by bot id=6669158800, aiogram.event
+2024-06-02 19:04:17,597, ERROR, Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 121] Превышен таймаут семафора, aiogram.dispatcher
+2024-06-02 19:04:17,597, WARNING, Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6669158800), aiogram.dispatcher
+2024-06-02 19:04:28,829, INFO, Connection established (tryings = 1, bot id = 6669158800), aiogram.dispatcher
+2024-06-02 19:04:48,099, ERROR, Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 121] Превышен таймаут семафора, aiogram.dispatcher
+2024-06-02 19:04:48,099, WARNING, Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6669158800), aiogram.dispatcher
+2024-06-02 19:05:00,534, INFO, Connection established (tryings = 1, bot id = 6669158800), aiogram.dispatcher
