@@ -61,7 +61,6 @@ services:
       - static_value:/var/html/static/
       - ./app/conf.d:/etc/nginx/conf.d
 
-
     networks:
       - db_network
 
