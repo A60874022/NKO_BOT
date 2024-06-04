@@ -31,7 +31,7 @@ def send_message(message: str) -> Response:
         "messages": [
             {
                 "role": "system",
-                "text": "Отвечай как можно более кратко"
+                "text": "Отвечай как можно более точно"
             },
             {
                 "role": "user",
