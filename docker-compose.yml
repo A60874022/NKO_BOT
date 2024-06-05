@@ -69,6 +69,5 @@ volumes:
   static_value:
   mongo_config:
 
-
 networks:
   db_network:

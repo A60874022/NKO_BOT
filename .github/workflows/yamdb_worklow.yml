@@ -61,7 +61,7 @@ jobs:
            key: ${{ secrets.SSH_KEY }} 
            passphrase: ${{ secrets.PASSPHRASE }} 
            script: | 
-            sudo docker-compose stop 
+            sudo -S docker-compose stop 
             sudo docker-compose rm bot
             sudo docker-compose rm admin 
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/bot:latest
