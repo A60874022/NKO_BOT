@@ -9,7 +9,7 @@ from starlette_admin.i18n import set_locale
 from mongoengine import connect, disconnect
 
 from .models import User, Topic
-from .settings import MONGO_URL, SECRET, MONGO_INITDB_ROOT_USERNAME, MONGO_INITDB_ROOT_PASSWORD
+from .settings import MONGO_URL, SECRET, ADMIN, PASS
 
 
 set_locale("ru")
@@ -18,7 +18,7 @@ set_locale("ru")
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     connect(host=MONGO_URL)
-    user = User(name=MONGO_INITDB_ROOT_USERNAME, password=pwd_context.hash(MONGO_INITDB_ROOT_PASSWORD))
+    user = User(name=ADMIN, password=pwd_context.hash(PASS))
     user.save()
     yield
     user.delete()
